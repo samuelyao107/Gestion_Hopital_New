@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajout</title>
+    <link rel="stylesheet" href="style/addpatient.css">
+</head>
+<body>
+
+<form action="" method="">
+  <div class="container">
+    <h1>Ajout de dossier médical</h1>
+
+    <div id="all">
+
+    <div id="left"><label for="NOM"><b>Nom</b></label>
+    <input type="text" placeholder="Entrer votre nom" name="NOM" required>
+
+    <label for="PRENOM"><b>Prénoms</b></label>
+    <input type="text" placeholder="Entrer votre(vos) prénom(s)" name="PRENOM" required>
+
+    <label for="DATENAISSANCE"><b>Date de Naissance</b></label>
+    <input type="date" placeholder="Entrer votre date de naissance" name="DATENAISSANCE" required>
+
+    <label for="LIEUNAISSANCE"><b>Lieu de naissance</b></label>
+    <input type="text" placeholder="Entrer votre nom" name="LIEUNAISSANCE" required>
+    <label for="PROFESSION"><b>Profession</b></label>
+    <input type="text" placeholder="Entrer votre profession" name="PROFESSION" required>
+      <p>SEXE:</p>
+      <div id="s">
+        <label><input type="radio" name="SEXE">Masculin</label>
+        <label><input type="radio" name="SEXE"> Féminin</label>
+      </div>
+    </div>
+    <div id="right">
+    <label for="CONTACT"><b>Contact</b></label>
+    <input type="text" placeholder="Entrer votre contact" name="CONTACT" required>
+    <label for="EMAIL"><b>Email</b></label>
+    <input type="text" placeholder="Entrer votre mail" name="EMAIL" required>
+    <label for="ANTECEDANTS"><b>Antécédants</b></label>
+    <input type="text" placeholder="Entrer les antécédants" name="ANTECEDANTS" required>
+    <label for="HABITATION"><b>Habitation</b></label>
+    <input type="text" placeholder="Entrer le lieu d'habitation" name="HABITATION" required>
+
+
+    <p>GROUPE SANGUIN:</p>
+
+    <label><input type="radio" name="GROUPESANGUIN">A+</label>
+    <label><input type="radio" name="GROUPESANGUIN">A-</label>
+    <label><input type="radio" name="GROUPESANGUIN">B+</label>
+    <label><input type="radio" name="GROUPESANGUIN">B-</label>
+    <label><input type="radio" name="GROUPESANGUIN">AB+</label>
+    <label><input type="radio" name="GROUPESANGUIN">AB-</label>
+    <label><input type="radio" name="GROUPESANGUIN">O+</label>
+    <label><input type="radio" name="GROUPESANGUIN">O-</label>
+    </div>
+    </div>
+
+    <button type="submit" class="registerbtn">Ajouter</button>
+  </div>
+
+
+</form>
+
+
+</body>
+</html>
