@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Receptioniste</title>
+    <link rel="stylesheet" href="style/dashboard_medecin.css">
+</head>
+<body>
+<div id="right-side">
+    <div id="logo">
+        <p>ASSENDA</p>
+    </div>
+    <div id="image">
+        <img src="assets/img-1.jpg" alt="user">
+        <p>Dr YAO</p>
+    </div>
+    <div class="icon">
+        <i class="fa-solid fa-gauge"></i>
+        <a href="">Tableau de Bord</a>
+    </div>
+    <div class="icon">
+        <i class="fa-solid fa-calendar-check"></i>
+        <a href="">Rendez-vous</a>
+    </div>
+</div>
+<div id="header">
+    <div class="search-box">
+        <button class="btn-search"><i class="fas fa-search"></i></button>
+        <input type="text" class="input-search" placeholder="Type to Search...">
+    </div>
+    <div id="dots">
+        <i class="fa-solid fa-ellipsis-vertical"></i>
+    </div>
+
+        <img src="assets/img-1.jpg" alt="user">
+        <p>Dr YAO</p>
+
+</div>
+<div id="center">
+
+    <div id="center_header">
+        <p>Dashboard</p>
+        <div id="center_button">
+
+            <p>Nouvelle Consultation</p>
+            <a href="add_consultation.html"> <i class="fa-solid fa-plus"></i> </a>
+        </div>
+    </div>
+    <div id="boxes">
+        <div class="box">
+            <i class="fa-regular fa-calendar-check"></i>
+            <div class="text">
+                <p>Rendez-Vous</p>
+                <p class="number">500</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-user"></i>
+            <div class="text">
+                <p>Nouveaux Patients</p>
+                <p class="number">155</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-hospital"></i>
+            <div class="text">
+                <p>Examens</p>
+                <p class="number">500</p>
+            </div>
+
+        </div>
+        <div class="box">
+            <i class="fa-solid fa-user-doctor"></i>
+            <div class="text">
+                <p>Médecins Présents</p>
+                <p class="number">500</p>
+            </div>
+
+        </div>
+
+    </div>
+    <div id="charts">
+        <div id="columnchart_values" style="width: 900px; height: 300px;"></div>
+        <div id="piechart" style="width: 900px; height: 400px;"></div>
+    </div>
+
+</div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ["Element", "Nombre", { role: "style" } ],
+            ["Lundi", 8, "dodgerblue"],
+            ["Mardi", 10, "lightgreen"],
+            ["Mercredi", 19, "#DE3163"],
+            ["Jeudi", 21, "color: #F28C28"],
+            ["Vendredi", 19, "#6495ED"],
+            ["Samedi", 19, "lightgreen"],
+            ["Dimanche", 19, "#DE3163"],
+
+        ]);
+
+        var view = new google.visualization.DataView(data);
+        view.setColumns([0, 1,
+            { calc: "stringify",
+                sourceColumn: 1,
+                type: "string",
+                role: "annotation" },
+            2]);
+
+        var options = {
+            title: "Nombre de patients par jour",
+            width: 600,
+            height: 400,
+            bar: {groupWidth: "95%"},
+            legend: { position: "none" },
+        };
+        var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+        chart.draw(view, options);
+    }
+</script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Maternité',     11],
+            ['Ophtamologie',      2],
+            ['ORL',  2],
+            ['Psychiatrie', 2],
+            ['Urgence',    7]
+        ]);
+
+        var options = {
+            title: 'Patients par service'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+</script>
+<script src="https://kit.fontawesome.com/fd6b5e15b7.js" crossorigin="anonymous"></script>
+</body>
+</html>

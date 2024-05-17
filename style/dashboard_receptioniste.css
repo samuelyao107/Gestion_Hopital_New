@@ -47,8 +47,8 @@ body{
 }
 
 #logo p{
- margin-left: 50px;
- font-size: 20px;
+    margin-left: 50px;
+    font-size: 20px;
     color: white;
     font-weight: bold;
 }
@@ -106,7 +106,7 @@ body{
     border-radius: 50%;
     transition: all .5s ease-in-out;
     background-color: dodgerblue;
-   /* padding-right: 40px;*/
+    /* padding-right: 40px;*/
     color:black;
 }
 .input-search::placeholder{
@@ -173,20 +173,40 @@ body{
 
 
 #center {
-        position: absolute;
+    position: absolute;
 
-        height: calc(100% - 70px);
-        margin-top: 70px;
-        width: calc(100% - 200px); /* Adjust width relative to the right-side div */
-        margin-left: 200px;
-        /*z-index: 1; /* Bring it above other elements */
-    }
+    height: calc(100% - 70px);
+    margin-top: 70px;
+    width: calc(100% - 200px); /* Adjust width relative to the right-side div */
+    margin-left: 200px;
+    /*z-index: 1; /* Bring it above other elements */
+}
+#center_header{
+    display: flex;
+    gap: 1000px;
 
-#center >p{
+}
+
+#center_header >p{
     margin-left: 50px;
     font-size: 25px;
     font-weight: bold;
     color: #939393;
+}
+#center_button{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+
+#center_button i {
+    margin-top: 15px;
+    text-align: center;
+    background-color: #DE3163;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
 }
 
 #boxes{
@@ -227,9 +247,9 @@ body{
 }
 
 .text p {
-   font-size: 20px;
+    font-size: 20px;
     font-weight: bold;
-   color: white;
+    color: white;
 }
 
 .box i{
@@ -237,6 +257,12 @@ body{
     margin-top: 40px;
     font-size: 50px;
 }
+#charts{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
 
 
 

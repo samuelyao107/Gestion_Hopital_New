@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@100;200;300;400&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+* {
+
+    font-family: "Montserrat", sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+#right-side{
+    position: absolute;
+    width: 200px;
+    height: 100%;
+    background-color: #cccccc;
+}
+#image {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+#image p{
+    margin-top: 55px;
+    font-weight: bold;
+}
+
+
+#right-side img{
+    margin-top: 25px;
+    margin-left: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+#logo{
+    display: flex;
+    width: 200px;
+    height: 70px;
+    background-color: dodgerblue;
+    align-items: center;
+    text-align: center;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+#logo p{
+ margin-left: 50px;
+ font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.icon{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    cursor: pointer;
+    padding: 5px;
+    transition: 0.5s ease-in;
+}
+.icon:hover{
+    background-color: #939393;
+
+    border-radius: 5px;
+}
+.icon a{
+    margin-top: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.icon i{
+    font-size: 35px;
+    margin-top: 8px;
+    margin-left: 10px ;
+}
+
+#header{
+    position: absolute;
+    background-color:whitesmoke ;
+    width: 90%;
+    height: 70px;
+    margin-left: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+}
+.input-search{
+    margin-top:10px;
+    margin-left: 20px;
+    height: 40px;
+    width: 40px;
+    border-style: none;
+    /*padding: 10px;*/
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 50%;
+    transition: all .5s ease-in-out;
+    background-color: dodgerblue;
+   /* padding-right: 40px;*/
+    color:black;
+}
+.input-search::placeholder{
+    color:dodgerblue;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+.btn-search{
+    position: absolute;
+    margin-top: 6px;
+    margin-left: 10px;
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:lightgreen ;
+    background-color:transparent;
+    pointer-events: painted;
+}
+.btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid dodgerblue;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+.input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid dodgerblue;
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+}
+
+#dots{
+    margin-left: 1680px;
+    margin-top: -30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#header img{
+    position: absolute;
+    margin-left: 1600px;
+    margin-top: -40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#header p{
+    margin-left: 1500px;
+    margin-top: -25px;
+    cursor: pointer;
+}
+
+
+#center {
+        position: absolute;
+
+        height: calc(100% - 70px);
+        margin-top: 70px;
+        width: calc(100% - 200px); /* Adjust width relative to the right-side div */
+        margin-left: 200px;
+        /*z-index: 1; /* Bring it above other elements */
+    }
+
+#center_header{
+    display: flex;
+    gap: 1200px;
+
+}
+
+#center_header >p{
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    color: #939393;
+}
+#center_button{
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+
+#center_button i {
+    margin-top: 15px;
+    text-align: center;
+    background-color: #DE3163;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+#boxes{
+    display: flex;
+    /*flex-direction: row;*/
+    gap: 120px;
+
+    height: 200px;
+    padding: 25px;
+    width:calc(100%-200px);
+
+}
+.box:nth-child(1){
+    background-color:#F28C28;
+}
+.box:nth-child(2){
+    background-color:#50C878;
+}
+.box:nth-child(3){
+    background-color:#6495ED;
+}
+
+.box:nth-child(4){
+    background-color:#DE3163;
+}
+
+
+
+.box{
+
+    display: flex;
+    gap: 30px;
+    background-color: blue;
+    padding: 20px;
+    height: 120px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+.text p {
+   font-size: 20px;
+    font-weight: bold;
+   color: white;
+}
+
+.box i{
+    color: white;
+    margin-top: 40px;
+    font-size: 50px;
+}
+
+#charts{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+
+
+
+
